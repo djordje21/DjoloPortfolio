@@ -49,7 +49,7 @@ class PortfoliosController < ApplicationController
         
         #redirect
     respond_to do |format|
-      format.html { redirect_to blogs_url, notice: 'Blog was removed.' }
+      format.html { redirect_to blogs_url, notice: 'Record was removed.' }
     end
   end
 end
