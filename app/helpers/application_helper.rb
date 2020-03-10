@@ -9,3 +9,14 @@ module ApplicationHelper
 		end			
 	end
 end
+def source_helper(layout_name)
+	 if session[:source] 
+    greeting = "Thanks for visiting me from #{session[:source]} and you are on the #{layout_name} layout "
+    content_tag(:p, greeting, class: "source_greeting")
+    end
+end
+
+def copyright_generator
+ 	  DjoloAppViewTool::Renderer.copyright 'Djordje Milenkovic', 'All right reserved'
+  end
+end
